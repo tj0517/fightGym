@@ -1,16 +1,15 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { Funnel_Sans } from 'next/font/google';
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const funnelSans = Funnel_Sans({
+  subsets: ['latin'],
+  weight: ['300','400', '500', '600', '800'], // Wybierz potrzebne grubości
+  display: 'swap',
+  variable: '--font-funnel-sans', // Opcjonalnie: jako zmienna CSS
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -23,10 +22,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html lang="pl" className={funnelSans.variable}>
+      <body className={funnelSans.className}>
         {children}
       </body>
     </html>
