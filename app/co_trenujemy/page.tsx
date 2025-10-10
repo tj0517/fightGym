@@ -30,12 +30,12 @@ const CoTrenujemyPage = () => {
     return (
         <div className='w-full overflow-x-hidden bg-stone-900 min-h-screen'>
             <Menu/>
-             <h1 className="md:text-8xl text-6xl font-bold mb-4 text-orange-400 w-full text-center py-20">Co <span className="text-white">Trenujemy?</span></h1>
-            <div className='w-full flex flex-col px-20'>
+             <h1 className="md:text-8xl text-6xl font-bold mb-4 text-orange-400 w-full text-center py-20 px-5 md:px-20">Co <span className="text-white">Trenujemy?</span></h1>
+            <div className='w-full flex flex-col px-5 md:px-20'>
             {treningi.map((el,idx)=>(
-                <div key={idx} className='mb-20 px-10  last:border-0'>
+                <div key={idx} className='mb-20 px-10  last:border-0 text-center md:text-left'>
                     <h2 className='text-5xl text-orange-400 font-bold mb-10'>{el.name}</h2>
-                    <p className='text-lg font-light text-white'>{el.desc}</p>
+                    <p className='text-[16px] sm:text-lg font-light text-white'>{el.desc}</p>
                     <div className='w-1/2 mx-auto border-b-2 border-orange-400 mt-15 last:'></div>
                 </div>
             ))}
